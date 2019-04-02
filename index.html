@@ -13,24 +13,32 @@
       <div class="box" id="player"></div>
       <div class="box">
         <div>
-          <img src="http://i.ytimg.com/vi/lrX6ktLg8WQ/sddefault.jpg" width="64"/>
-          <br>Sky News live<br>
-          lrX6ktLg8WQ
+          <button onclick='playYT("lrX6ktLg8WQ");'>
+            <img src="http://i.ytimg.com/vi/lrX6ktLg8WQ/sddefault.jpg" width="64"/>
+            <br>Sky News live<br>
+            lrX6ktLg8WQ
+          </button>
         </div>
         <div>
-          <img src="http://i.ytimg.com/vi/5avbHxRppxo/sddefault.jpg" width="64"/>
-          <br>Euronews English Live<br>
-          5avbHxRppxo
+          <button onclick='playYT("5avbHxRppxo");'>
+            <img src="http://i.ytimg.com/vi/5avbHxRppxo/sddefault.jpg" width="64"/>
+            <br>Euronews English Live<br>
+            5avbHxRppxo
+          </button>
         </div>
         <div>
-          <img src="http://i.ytimg.com/vi/a-M_5rGhPdg/sddefault.jpg" width="64"/>
-          <br>FRANCE 24 en Direct<br>
-          a-M_5rGhPdg
+          <button onclick='playYT("a-M_5rGhPdg");'>
+            <img src="http://i.ytimg.com/vi/a-M_5rGhPdg/sddefault.jpg" width="64"/>
+            <br>FRANCE 24 en Direct<br>
+            a-M_5rGhPdg
+          </button>
         </div>
         <div>
-          <img src="http://i.ytimg.com/vi/rWFTvniIDUs/sddefault.jpg" width="64"/>
-          <br>Africa24 Live<br>
-          rWFTvniIDUs
+          <button onclick='playYT("rWFTvniIDUs");'>
+            <img src="http://i.ytimg.com/vi/rWFTvniIDUs/sddefault.jpg" width="64"/>
+            <br>Africa24 Live<br>
+            rWFTvniIDUs
+          </button>
         </div>
       </div>
     </div>
@@ -84,6 +92,26 @@
         player.stopVideo();
       }
 */
+
+      function playYT(v_id) {
+        player.loadVideoById(v_id);
+        /*
+        let height = window.innerHeight - 100;
+        let width  = height * 16 / 9;
+        delete player;
+        player = new YT.Player('player', {
+//          height: '780',
+          height: height,
+//          width: '1280',
+          width:  width,
+          videoId: v_id,
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+        */
+      }
     </script>
     <script>
       var clock = document.getElementById("clock");
