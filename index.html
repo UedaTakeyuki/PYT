@@ -4,14 +4,9 @@
 <!--    <script>document.write("innerHeight = " +window.innerHeight);</script> -->
 <!--    <script>document.write("innerWidth = " +window.innerWidth);</script> -->
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-    <style>
-    .box {
-      display: inline-block;
-    }
-    </style>
-    <div class="container">
-      <div class="box" id="player"></div>
-      <div class="box">
+    <div class="container" style="display:flex;">
+      <div id="player"></div>
+      <div id="panel">
         <div>
           <button onclick='playYT("lrX6ktLg8WQ");'>
             <img src="http://i.ytimg.com/vi/lrX6ktLg8WQ/sddefault.jpg" width="64"/>
@@ -59,9 +54,7 @@
         let height = window.innerHeight - 100;
         let width  = height * 16 / 9;
         player = new YT.Player('player', {
-//          height: '780',
           height: height,
-//          width: '1280',
           width:  width,
           videoId: 'lrX6ktLg8WQ',
           events: {
@@ -94,23 +87,8 @@
 */
 
       function playYT(v_id) {
+        // https://stackoverflow.com/questions/13180540/how-to-dynamically-change-youtube-player-videoid
         player.loadVideoById(v_id);
-        /*
-        let height = window.innerHeight - 100;
-        let width  = height * 16 / 9;
-        delete player;
-        player = new YT.Player('player', {
-//          height: '780',
-          height: height,
-//          width: '1280',
-          width:  width,
-          videoId: v_id,
-          events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-          }
-        });
-        */
       }
     </script>
     <script>
