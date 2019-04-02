@@ -4,7 +4,37 @@
 <!--    <script>document.write("innerHeight = " +window.innerHeight);</script> -->
 <!--    <script>document.write("innerWidth = " +window.innerWidth);</script> -->
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-    <div id="player"></div>
+    <style>
+    .box {
+      display: inline-block;
+    }
+    </style>
+    <div class="container">
+      <div class="box" id="player"></div>
+      <div class="box">
+        <div>
+          <img src="http://i.ytimg.com/vi/lrX6ktLg8WQ/sddefault.jpg" width="64"/>
+          <br>Sky News live<br>
+          lrX6ktLg8WQ
+        </div>
+        <div>
+          <img src="http://i.ytimg.com/vi/5avbHxRppxo/sddefault.jpg" width="64"/>
+          <br>Euronews English Live<br>
+          5avbHxRppxo
+        </div>
+        <div>
+          <img src="http://i.ytimg.com/vi/a-M_5rGhPdg/sddefault.jpg" width="64"/>
+          <br>FRANCE 24 en Direct<br>
+          a-M_5rGhPdg
+        </div>
+        <div>
+          <img src="http://i.ytimg.com/vi/rWFTvniIDUs/sddefault.jpg" width="64"/>
+          <br>Africa24 Live<br>
+          rWFTvniIDUs
+        </div>
+      </div>
+    </div>
+    <h1 id="clock"></h1>
 
     <script>
       // 2. This code loads the IFrame Player API code asynchronously.
@@ -55,7 +85,6 @@
       }
 */
     </script>
-    <h1 id="clock"></h1>
     <script>
       var clock = document.getElementById("clock");
       function clockwork() {
