@@ -1,2 +1,3 @@
 2019.04.01 first version
 2019.04.02 channel turn
+2019.04.04 https://crieit.net/boards/qa-css/80429a6922a9d574810aaa2ae58abab2

@@ -6,7 +6,7 @@
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
     <div class="container" style="display:flex;">
       <div id="player"></div>
-      <div id="panel">
+      <div id="panel" style="overflow:auto">
         <div>
           <button onclick='playYT("lrX6ktLg8WQ");'>
             <img src="http://i.ytimg.com/vi/lrX6ktLg8WQ/sddefault.jpg" width="64"/>
@@ -53,6 +53,10 @@
       function onYouTubeIframeAPIReady() {
         let height = window.innerHeight - 100;
         let width  = height * 16 / 9;
+
+        // https://crieit.net/boards/qa-css/80429a6922a9d574810aaa2ae58abab2
+        document.querySelector('.container').style.height = height + 'px';
+
         player = new YT.Player('player', {
           height: height,
           width:  width,
